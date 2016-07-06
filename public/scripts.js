@@ -10,6 +10,11 @@ you can't return multiple adjacent JSX tags but must wrap them
 in one parent element.
 */
 
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {createStore} from 'redux';
+import {Provider, connect} from 'react-redux';
+
 var HelloMessage = React.createClass({
   render: function () {
     return <h1>Hello {this.props.message}!</h1>;
@@ -43,7 +48,7 @@ function counter(state = { count: 0 }, action) {
 }
 
 // Store
-const store = Redux.createStore(counter);
+const store = createStore(counter);
 
 // Map Redux state to component props
 function mapStateToProps(state) {
@@ -59,14 +64,14 @@ function mapDispatchToProps(dispatch) {
   }
 }
 
-const App = ReactRedux.connect(
+const App = connect(
   mapStateToProps,
   mapDispatchToProps
 )(Counter)
 
 ReactDOM.render(
-    <ReactRedux.Provider store={store}>
+    <Provider store={store}>
     <App />
-    </ReactRedux.Provider>, 
+    </Provider>, 
     document.getElementById('root')
 );

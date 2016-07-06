@@ -2,38 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>React Hello World</title>
+    <title>React on PHP server</title>
   </head>
   <body>
-    
-    <!--
-    The recommended approach in React is to use a container
-    dive to load your react code into, rather than using `document.body`.
-    
-    This can be any element or tag name, just don't use `document.body`
-    if you can avoid it.
-    -->
     <div id='root'></div>
-    
-    <!--
-    For ease of use, we are including the React, ReactDOM and Babel CDN
-    builds to make getting started as fast as possible.
-    
-    In production, you'll want to instead look at using something 
-    like Gulp, Grunt or WebPack (my personal recommendation) 
-    to compile JSX into JavaScript. Also, check out:
-    http://facebook.github.io/react/docs/tooling-integration.html
-    -->
-    <script src="https://fb.me/react-15.0.1.js"></script>
-    <script src="https://fb.me/react-dom-15.0.1.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/3.5.2/redux.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-redux/4.4.5/react-redux.min.js"></script>
-    
-    <!--
-    This is where you link to your React code. Can be .js or .jsx 
-    extension, doesn't really matter.
-    -->
-    <script src="scripts.js" type="text/babel"></script>
+    <script src="bundle.js"></script>
   </body>
 </html>
